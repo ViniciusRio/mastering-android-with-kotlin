@@ -7,6 +7,7 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,14 +20,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         vehicles = mutableListOf(
-            Vehicle(1, getString(R.string.onix), 2018, Manufacturer.GM.value, gasoline = true, ethanol = true),
-            Vehicle(2, getString(R.string.uno), 2007, Manufacturer.FIAT.value, gasoline = true, ethanol = false),
-            Vehicle(3, getString(R.string.del_rey), 1988, Manufacturer.FORD.value, gasoline = false, ethanol = true),
-            Vehicle(4, getString(R.string.gol), 2014, Manufacturer.VOLKSWAGEN.value, gasoline = true, ethanol = true),
+            Vehicle(1,
+                getString(R.string.onix),
+                2018,
+                Manufacturer.GM.value,
+                gasoline = true,
+                ethanol = true),
+            Vehicle(2,
+                getString(R.string.uno),
+                2007,
+                Manufacturer.FIAT.value,
+                gasoline = true,
+                ethanol = false),
+            Vehicle(3,
+                getString(R.string.del_rey),
+                1988,
+                Manufacturer.FORD.value,
+                gasoline = false,
+                ethanol = true),
+            Vehicle(4,
+                getString(R.string.gol),
+                2014,
+                Manufacturer.VOLKSWAGEN.value,
+                gasoline = true,
+                ethanol = true),
         )
 
-        val listView = ListView(this)
-        setContentView(listView)
+        setContentView(R.layout.activity_main)
+
+        listView.emptyView = empty
 
         val vehicleAdapter = VehicleAdapter(this, vehicles)
         listView.adapter = vehicleAdapter
@@ -47,6 +69,9 @@ class MainActivity : AppCompatActivity() {
                     "${vehicle.model} ${vehicle.year}",
                     Toast.LENGTH_SHORT
                 ).show()
+                vehicles.remove(vehicle)
+                vehicleAdapter.notifyDataSetChanged()
+                tvFooter.text = setTextFooter(vehicleAdapter)
             }
         }
     }
@@ -66,15 +91,18 @@ class MainActivity : AppCompatActivity() {
     private fun initFooter(listView: ListView, adapter: VehicleAdapter) {
         tvFooter = TextView(this)
 
-        tvFooter.text = resources.getQuantityString(
-            R.plurals.vehicle_footer_text,
-            adapter.count,
-            adapter.count
-        )
+        tvFooter.text = setTextFooter(adapter)
         tvFooter.setBackgroundColor(Color.LTGRAY)
         tvFooter.gravity = Gravity.END
         tvFooter.setPadding(0, padding, padding, padding)
 
         listView.addFooterView(tvFooter)
     }
+
+    private fun setTextFooter(adapter: VehicleAdapter) =
+        resources.getQuantityString(
+            R.plurals.vehicle_footer_text,
+            adapter.count,
+            adapter.count
+        )
 }
