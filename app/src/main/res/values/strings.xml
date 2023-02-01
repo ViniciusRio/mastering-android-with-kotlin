@@ -11,6 +11,14 @@
     <string name="uno">Uno</string>
     <string name="del_rey">Del Rey</string>
     <string name="gol">Gol</string>
+    <string name="vehicle_header_text">Carros</string>
+    <string name="no_vehicles">Nenhum carro cadastrado</string>
+
+    <plurals name="vehicle_footer_text">
+        <item quantity="one">%d carro</item>
+        <item quantity="other">%d carros</item>
+    </plurals>
+
 
     <array name="logos">
         <item>@drawable/fiat_logo</item>

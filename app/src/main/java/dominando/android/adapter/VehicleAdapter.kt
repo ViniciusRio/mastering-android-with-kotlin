@@ -25,7 +25,7 @@ class VehicleAdapter(
 
     override fun getItem(position: Int): Any = vehicles[position]
 
-    override fun getItemId(position: Int): Long = position.toLong()
+    override fun getItemId(position: Int): Long = vehicles[position].id.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val vehicle = vehicles[position]
@@ -34,7 +34,7 @@ class VehicleAdapter(
 
         // none view to reuse
         if (convertView == null) {
-            Log.d("NGVL", "View nova => posiotion: $position")
+            Log.d("NGVL", "New View  => position: $position")
             // load layout
             row = LayoutInflater.from(context).inflate(R.layout.item_vehicle, parent, false)
             // viewHolder receive a view
@@ -44,7 +44,7 @@ class VehicleAdapter(
 
             // view can reuse
         } else {
-            Log.d("NGVL", "View existente => posiotion: $position")
+            Log.d("NGVL", "Existence View => position: $position")
 
             row = convertView
             holder = convertView.tag as ViewHolder
