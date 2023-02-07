@@ -1,29 +1,3 @@
 <resources>
-    <string name="app_name">Adapter</string>
-    <string name="manufacturer_icon">manufacturer icon</string>
-    <string name="vehicle_model">Modelo</string>
-    <string name="vehicle_gasoline_ethanol">Gasolina/Etanol</string>
-    <string name="vehicle_fuel_flex">Gasolina e Etanol</string>
-    <string name="vehicle_fuel_gasoline">Gasolina</string>
-    <string name="vehicle_fuel_ethanol">Etanol</string>
-    <string name="vehicle_fuel_invalid">Não informado</string>
-    <string name="onix">Onix</string>
-    <string name="uno">Uno</string>
-    <string name="del_rey">Del Rey</string>
-    <string name="gol">Gol</string>
-    <string name="vehicle_header_text">Carros</string>
-    <string name="no_vehicles">Nenhum carro cadastrado</string>
-
-    <plurals name="vehicle_footer_text">
-        <item quantity="one">%d carro</item>
-        <item quantity="other">%d carros</item>
-    </plurals>
-
-
-    <array name="logos">
-        <item>@drawable/fiat_logo</item>
-        <item>@drawable/vw_logo</item>
-        <item>@drawable/gm_logo</item>
-        <item>@drawable/ford_logo</item>
-    </array>
+    <string name="app_name">Mastering Android</string>
 </resources>
