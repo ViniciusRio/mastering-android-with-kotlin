@@ -1,4 +1,4 @@
 package dominando.android.adapter
 
-class Message() {
+class Message(var title: String, var text: String) {
 }
