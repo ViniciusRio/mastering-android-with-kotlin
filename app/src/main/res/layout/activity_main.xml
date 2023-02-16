@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_title"
+        android:minHeight="@dimen/space_48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -38,11 +39,13 @@
             android:id="@+id/edtText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="@dimen/space_48dp"
             android:hint="@string/hint_text"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
    <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvMessages"
        android:layout_width="match_parent"
        android:layout_height="0dp"
        app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +63,7 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="float button"
+        android:contentDescription="@string/button_add_list"
         app:srcCompat="@drawable/ic_add"/>
 
 

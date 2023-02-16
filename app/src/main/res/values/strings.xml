@@ -2,4 +2,5 @@
     <string name="app_name">Mastering Android</string>
     <string name="hint_title">Título</string>
     <string name="hint_text">Texto</string>
+    <string name="button_add_list">botão para adicionar item a lista</string>
 </resources>

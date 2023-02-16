@@ -14,7 +14,7 @@
         android:padding="@dimen/space_8dp">
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -22,7 +22,7 @@
             android:textSize="@dimen/text_20sp" />
 
         <TextView
-            android:id="@+id/tvText"
+            android:id="@+id/txtText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_16sp"/>
