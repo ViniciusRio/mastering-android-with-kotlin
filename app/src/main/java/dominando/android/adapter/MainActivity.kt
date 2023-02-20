@@ -16,12 +16,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        onRetainCustomNonConfigurationInstance().let {
+            if (it is MutableList<*>) {
+                messages.addAll(it.filterIsInstance(Message::class.java))
+            }
+        }
+
         initRecyclerView()
         initSwipeGesture()
 
         fabAdd.setOnClickListener {
             addMessage()
         }
+    }
+
+    override fun onRetainCustomNonConfigurationInstance(): Any {
+        return messages
+
     }
 
     private fun initSwipeGesture() {
