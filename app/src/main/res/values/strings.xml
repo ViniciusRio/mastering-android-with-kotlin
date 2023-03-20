@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mastering Android</string>
+    <string name="first_button">Primeiro Botão</string>
+    <string name="second_button">Segundo Botão</string>
+    <string name="three_button">Terceiro Botao</string>
+    <string name="four_button">Quarto Botao</string>
+    <string name="margin_text">Margin</string>
+    <string name="padding_text">Padding</string>
 </resources>
