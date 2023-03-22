@@ -74,7 +74,7 @@
         app:layout_constraintStart_toEndOf="@+id/buttonB"
         app:layout_constraintTop_toTopOf="@+id/buttonB" />
 
-<!--    Sane Flexibility that relative layout. chains more powereful that linear-->
+<!--    Same Flexibility that relative layout. chains more powereful that linear-->
 <!--    layout and can create tables and grids with chains and guidelines-->
 
 
