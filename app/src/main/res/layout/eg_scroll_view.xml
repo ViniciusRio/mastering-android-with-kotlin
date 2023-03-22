@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/eg_width_height"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_card_view"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_constraint_layout"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_frame_layout"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_grid_layout"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_linear_layout"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_margin_padding"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_relative_layout"/>
+        <View style="@style/Divider"/>
+        <include layout="@layout/eg_table_layout"/>
+
+    </LinearLayout>
+
+</ScrollView>
