@@ -10,6 +10,8 @@ class OtherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_other)
 
         val name = intent.getStringExtra("name");
-        tvMessage.text = name
+        val age = intent.getIntExtra("age", -1);
+
+        tvMessage.text ="$name, $age"
     }
 }
