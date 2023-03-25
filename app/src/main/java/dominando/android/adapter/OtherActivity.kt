@@ -12,11 +12,12 @@ class OtherActivity : AppCompatActivity() {
         val name = intent.getStringExtra("name");
         val age = intent.getIntExtra("age", -1);
         val client = intent.getParcelableExtra<Client>("client")
+        val person = intent.getSerializableExtra("person") as Person?
 
         tvMessage.text = if(client != null) {
             "Nome: ${client.name} / Código: ${client.code}"
         } else {
-            "Nome: $name / Idade: $age"
+            "Nome: ${person?.name} / Idade: ${person?.age}"
         }
 
     }

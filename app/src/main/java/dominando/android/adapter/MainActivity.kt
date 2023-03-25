@@ -30,5 +30,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("client", client)
             startActivity(intent)
         }
+
+        btSerializable.setOnClickListener {
+            val person = Person("Valber", 50)
+            val intent = Intent(this, OtherActivity::class.java)
+            intent.putExtra("person", person)
+
+            startActivity(intent)
+        }
     }
 }
