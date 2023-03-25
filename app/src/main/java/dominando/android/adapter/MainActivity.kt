@@ -16,11 +16,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
         }
 
-        btButton2.setOnClickListener {
+        btCallIntent.setOnClickListener {
         // CustomClass::class.java return object type KClass<CustomClass>
             val intent = Intent(this, OtherActivity::class.java)
             intent.putExtra("name", etText.text.toString())
             intent.putExtra("age", 26)
+            startActivity(intent)
+        }
+
+        btParcel.setOnClickListener {
+            val client = Client(1, "Vinícius")
+            val intent = Intent(this, OtherActivity::class.java)
+            intent.putExtra("client", client)
             startActivity(intent)
         }
     }
