@@ -16,6 +16,7 @@ class OtherActivity : AppCompatActivity() {
         val clientParceler =
             Parcels.unwrap<ClientParceler?>(intent.getParcelableExtra<Client>("clientParcel"))
         val person = intent.getSerializableExtra("person") as Person?
+        val personParcelize = intent.getParcelableExtra<PersonParcelize>("personParcelize")
 
         tvMessage.text = if (client != null) {
             getString(R.string.text_one_other_activity, client.name, client.code)
@@ -25,6 +26,11 @@ class OtherActivity : AppCompatActivity() {
             getString(
                 R.string.text_one_other_activity, clientParceler.name,
                 clientParceler.code
+            )
+        } else if (personParcelize != null) {
+            getString(
+                R.string.text_two_other_activity, personParcelize.name,
+                personParcelize.age
             )
         } else {
             getString(R.string.text_two_other_activity, name, age)

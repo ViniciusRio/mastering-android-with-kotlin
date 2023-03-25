@@ -48,5 +48,13 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
+        btParcelize.setOnClickListener {
+            val personParcelize = PersonParcelize("Cleide", 60)
+            val intent = Intent(this, OtherActivity::class.java)
+            intent.putExtra("personParcelize", personParcelize)
+
+            startActivity(intent)
+        }
     }
 }

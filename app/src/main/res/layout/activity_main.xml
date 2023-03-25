@@ -66,6 +66,15 @@
         app:layout_constraintStart_toStartOf="@id/btParcel"
         app:layout_constraintTop_toBottomOf="@id/btParcel" />
 
+    <Button
+        android:id="@+id/btParcelize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Parcelize"
+        app:layout_constraintStart_toStartOf="@id/btParceler"
+        app:layout_constraintTop_toBottomOf="@id/btParceler" />
+
 
 
 
