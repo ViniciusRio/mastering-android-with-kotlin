@@ -15,9 +15,11 @@ class OtherActivity : AppCompatActivity() {
         val person = intent.getSerializableExtra("person") as Person?
 
         tvMessage.text = if(client != null) {
-            "Nome: ${client.name} / Código: ${client.code}"
+            getString(R.string.text_one_other_activity, client.name, client.code)
+        } else if (person !=null ) {
+            getString(R.string.text_two_other_activity, person?.name, person?.age)
         } else {
-            "Nome: ${person?.name} / Idade: ${person?.age}"
+            getString(R.string.text_two_other_activity, name, age)
         }
 
     }

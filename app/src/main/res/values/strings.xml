@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mastering Android</string>
+    <string name="text_one_other_activity">Nome: %1s / Código: %2$d</string>
+    <string name="text_two_other_activity">Nome: %1s / Idade: %2$d</string>
 </resources>
