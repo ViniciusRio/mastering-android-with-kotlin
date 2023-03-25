@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import org.parceler.ParcelWrapper
+import org.parceler.Parcels
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,14 @@ class MainActivity : AppCompatActivity() {
             val person = Person("Valber", 50)
             val intent = Intent(this, OtherActivity::class.java)
             intent.putExtra("person", person)
+
+            startActivity(intent)
+        }
+
+        btParceler.setOnClickListener {
+            val clientParceler = ClientParceler(code = 1, name = "Wilyanne")
+            val intent = Intent(this, OtherActivity::class.java)
+            intent.putExtra("clientParcel", Parcels.wrap(clientParceler))
 
             startActivity(intent)
         }
