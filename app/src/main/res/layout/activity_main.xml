@@ -75,7 +75,13 @@
         app:layout_constraintStart_toStartOf="@id/btParceler"
         app:layout_constraintTop_toBottomOf="@id/btParceler" />
 
-
-
+    <Button
+        android:id="@+id/btLifecycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lifecycle"
+        app:layout_constraintStart_toStartOf="@id/btParcelize"
+        app:layout_constraintTop_toBottomOf="@id/btParcelize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
