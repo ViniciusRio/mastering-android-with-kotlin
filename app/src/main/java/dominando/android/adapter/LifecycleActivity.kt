@@ -5,11 +5,18 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 class LifecycleActivity : AppCompatActivity() {
-
     // Called when started the app
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lifecycle)
+        /*
+        * android:configChanges="orientation|keyboardHidden" in manifest
+        * say the SO don't recreate activity when orientation change
+        * and that will handle manual with override onConfigurationChanged
+        * keyboardHidden serve for devices the has a psychical keyboard
+        * */
+        // android:screenOrientation="portrait" in manifest
+        // requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         Log.i("NGVL", "LifecycleActivity::onCreated")
     }
