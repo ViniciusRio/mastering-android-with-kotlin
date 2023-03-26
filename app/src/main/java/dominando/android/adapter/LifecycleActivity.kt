@@ -43,6 +43,19 @@ class LifecycleActivity : AppCompatActivity() {
         Log.i("NGVL", "LifecycleActivity::onPause")
 
     }
+    /*
+    * Called after onPause and before onStop
+    * */
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
+
+    /*
+    * Called after onStart and before onResume
+    * */
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+    }
 
     /*
        Called when initial methods from other activity is started
