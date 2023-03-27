@@ -13,12 +13,17 @@ class OrientationMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_orientation_main)
+        // option 1 deprecated
+//        if (lastCustomNonConfigurationInstance != null) {
+//            names = lastCustomNonConfigurationInstance as ArrayList<String>
+//        }
         /*
+        option 2
         * Android save content with id and not modification programmatically
         * */
-        if (savedInstanceState != null) {
-            names = savedInstanceState.getStringArrayList("names") as ArrayList<String>
-        }
+//        if (savedInstanceState != null) {
+//            names = savedInstanceState.getStringArrayList("names") as ArrayList<String>
+//        }
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, names)
         lvNames.adapter = adapter
@@ -26,7 +31,11 @@ class OrientationMainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.putStringArrayList("names", names)
+//        outState?.putStringArrayList("names", names)
+    }
+
+    override fun onRetainCustomNonConfigurationInstance(): Any? {
+        return names
     }
 
     fun btnAddClick(view: View) {
