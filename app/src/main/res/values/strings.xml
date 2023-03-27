@@ -4,4 +4,17 @@
     <string name="text_two_other_activity">Nome: %1s / Idade: %2$d</string>
     <string name="name">Nome</string>
     <string name="btn_add">Adicionar</string>
+    <string name="select_state">Selecione um estado</string>
+    <string name="list_state">Lista de Estados</string>
+    <string-array name="states">
+        <item>Alagoas</item>
+        <item>Bahia</item>
+        <item>Ceará</item>
+        <item>Maranhão</item>
+        <item>Paraíba</item>
+        <item>Pernambuco</item>
+        <item>Piauí</item>
+        <item>Sergipe</item>
+        <item>Rio Grande do Norte</item>
+    </string-array>
 </resources>
