@@ -17,4 +17,20 @@
         <item>Sergipe</item>
         <item>Rio Grande do Norte</item>
     </string-array>
+    <string-array name="intent_actions">
+        <item>Browser</item>
+        <item>Realizando uma chamada</item>
+        <item>Mapa</item>
+        <item>SMS</item>
+        <item>Compartilhar</item>
+        <item>Alarme</item>
+        <item>Buscar na Web</item>
+        <item>Configurações</item>
+        <item>Minha intenção 1</item>
+        <item>Minha intenção 2</item>
+        <item>Sair</item>
+    </string-array>
+    <string name="error_intent">
+        Ação não suortada
+    </string>
 </resources>
